@@ -1,24 +1,19 @@
-import React, { Component } from 'react';
-import ViewCaseNav from './Navbar/ViewDocNav.js'
+import React from 'react';
+import ViewCaseNav from './Navbar/ViewDocNav.js';
 import RecordPhoto from './RecordPhoto';
 
-class ViewRecord extends Component
-{
+const ViewRecord = (props) => {
+    const recordId = props.routeParams.recordId;
+    console.log(props);
 
-    render()
-    {
-        var recordId = this.props.routeParams.recordId;
-        console.log(this.props);
-        return(
-            <div>
-            <ViewCaseNav recordId = {recordId}/>
+    return (
+        <div>
+            <ViewCaseNav recordId={recordId} />
             <div className="">
-                <RecordPhoto/>
+                <RecordPhoto />
             </div>
-            </div>
-        )
-
-    }
-}
+        </div>
+    );
+};
 
 export default ViewRecord;

@@ -1,25 +1,21 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-const ViewEducation = (props) =>
-{
-    var {recordId} = props;
-    var url = "/";
+const ViewEducation = (props) => {
+    const { recordId } = props;
+    const url = "/";
+
     return (
-
         <nav className="nav-wrapper grey darken-4 navbar">
             <div className="container">
-                <b><a href="/" className="brand-logo">Records</a></b>
-                <ul className = "right">
-                <li><a href="/Institute">Home</a></li>
-                <li> <a href={url}> Logout </a></li>
+                <b><Link to="/" className="brand-logo">Records</Link></b>
+                <ul className="right">
+                    <li><Link to="/Institute">Home</Link></li>
+                    <li><Link to={url}>Logout</Link></li>
                 </ul>
-                </div>
+            </div>
         </nav>
-
-    )
-
-}
-
+    );
+};
 
 export default ViewEducation;

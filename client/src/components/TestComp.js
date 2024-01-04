@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TestComp extends Component {
-    render(){
-        return(
-            <div >
-                <h1>Hello</h1>
-            </div>
-        )
-    }
-}
+const TestComp = () => {
+    return (
+        <div>
+            <h1>Hello</h1>
+        </div>
+    );
+};
+
 export default TestComp;
